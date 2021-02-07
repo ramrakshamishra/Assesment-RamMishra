@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Assessment-RaceTrack/.vs/Assessment-RaceTrack
+/.vs/Assessment-RaceTrack/config/applicationhost.config
+/Assessment-RaceTrack/bin
+/Assessment-RaceTrack/obj/Debug
+/Assessment-RaceTrack.Core/bin/Debug
+/Assessment-RaceTrack.Core/obj/Debug
+/Assessment-RaceTrack.Data/bin/Debug
+/Assessment-RaceTrack.Data/obj/Debug
+/Assessment-RaceTrack.Models/bin/Debug
+/Assessment-RaceTrack.Models/obj/Debug
+/Assessment-RaceTrack.Tests/bin/Debug

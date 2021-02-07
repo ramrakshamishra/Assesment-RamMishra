@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment-RaceTrack", "Assessment-RaceTrack\Assessment-RaceTrack.csproj", "{EEC41F3E-4D9B-4404-BEE8-AC06DDF684EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment-RaceTrack.Tests", "Assessment-RaceTrack.Tests\Assessment-RaceTrack.Tests.csproj", "{7473C252-EFCF-422A-84DA-29095BD33090}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment-RaceTrack.Core", "Assessment-RaceTrack.Core\Assessment-RaceTrack.Core.csproj", "{E557DE36-7869-4E91-B518-F692BBFB676F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment-RaceTrack.Data", "Assessment-RaceTrack.Data\Assessment-RaceTrack.Data.csproj", "{95DAA52B-415E-4053-B824-62BB3D6A93D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment-RaceTrack.Models", "Assessment-RaceTrack.Models\Assessment-RaceTrack.Models.csproj", "{A8599C19-B8E3-4BA2-B5F4-10969B61248B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8F2D823D-29AC-4065-8CAA-BE7F299070EF}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEC41F3E-4D9B-4404-BEE8-AC06DDF684EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEC41F3E-4D9B-4404-BEE8-AC06DDF684EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEC41F3E-4D9B-4404-BEE8-AC06DDF684EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEC41F3E-4D9B-4404-BEE8-AC06DDF684EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7473C252-EFCF-422A-84DA-29095BD33090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7473C252-EFCF-422A-84DA-29095BD33090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7473C252-EFCF-422A-84DA-29095BD33090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7473C252-EFCF-422A-84DA-29095BD33090}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E557DE36-7869-4E91-B518-F692BBFB676F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E557DE36-7869-4E91-B518-F692BBFB676F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E557DE36-7869-4E91-B518-F692BBFB676F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E557DE36-7869-4E91-B518-F692BBFB676F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95DAA52B-415E-4053-B824-62BB3D6A93D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95DAA52B-415E-4053-B824-62BB3D6A93D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95DAA52B-415E-4053-B824-62BB3D6A93D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95DAA52B-415E-4053-B824-62BB3D6A93D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8599C19-B8E3-4BA2-B5F4-10969B61248B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8599C19-B8E3-4BA2-B5F4-10969B61248B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8599C19-B8E3-4BA2-B5F4-10969B61248B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8599C19-B8E3-4BA2-B5F4-10969B61248B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75BADE01-457A-4EB6-85CA-319AAA61D839}
+	EndGlobalSection
+EndGlobal

@@ -22,6 +22,10 @@ namespace Assessment_RaceTrack.Services
         {
             return _vehicleRepository.GetVehiclesOnTrack(totalAllowedVehicleOnTrack);
         }
+        public int GetTotalVehicle()
+        {
+            return _vehicleRepository.GetVehiclesOnTrack().Count();
+        }
 
         public Response AddVehiclesOnTrack(VehicleDto vehicleDto)
         {

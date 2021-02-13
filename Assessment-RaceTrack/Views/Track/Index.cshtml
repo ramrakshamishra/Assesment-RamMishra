@@ -6,55 +6,21 @@
     bool activeAdd = Model.Count() < totalAllowedVehicle; }
 
 <script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/racetrack.js"></script>
 <div>
 
     <div>
         <p class="warning alert-info alert">
-            Only @totalAllowedVehicle vehicle will allow on track
+            Only @totalAllowedVehicle @RaceTrack.ResourceManager.GetString("UI:AllowedVehicleOnTrack")
         </p>
     </div>
-    <div class="text-right btn btn-default">
-        @if (activeAdd)
-        {
-            @Html.ActionLink("Add new vehicle on track", "Create", "Vehicle")
-        }
-        else
-        {
-            <text>Add action is not available</text>
-        }
-
+    <div>
+        <div>
+            <input type="button" class="btn btn-success btn-lg btn-block" value="Add vehicle on track" id="btnAdd"  />
+        </div>
+        
     </div>
     <div id="dvList">
 
     </div>
 </div>
-<script type="text/javascript">
-    $(document).ready(function () {
-        LoadList();
-
-    });
-    function RemoveVehicle(vehicleId) {
-        if (confirm('Are you sure want to delete?')) {
-            $.ajax({
-                type: "Post",
-                dataType: 'JSON',
-                url: "/Track/RemoveVehicleFromTrack",
-                data: { "vehicleId": vehicleId},
-                success: function () {
-                }
-            });
-            location.reload();
-        }
-    }
-    function LoadList() {
-        $.ajax({
-            type: "GET",
-            url: "/Track/GetVehicle",
-            contentType: 'application/html; charset=utf-8',
-            dataType: 'html',
-            success: function (result) {
-                $('#dvList').html(result);
-            }
-        });
-    }
-</script>

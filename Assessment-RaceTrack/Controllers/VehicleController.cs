@@ -1,4 +1,4 @@
-﻿using Assessment_RaceTrack.Core.Repository;
+﻿using Assessment_RaceTrack.Helper;
 using Assessment_RaceTrack.Models;
 using Assessment_RaceTrack.Services;
 using System;
@@ -29,7 +29,7 @@ namespace Assessment_RaceTrack.Controllers
             //Vehicle Inspection
             if (!_trackService.VehicleInspection(vehicleDto))
             {
-                ModelState.AddModelError(nameof(vehicleDto.ResponseMessage), "Vehilce inspection  failed.");
+                ModelState.AddModelError(nameof(vehicleDto.ResponseMessage), Utility.GetValueFromResources(ResourcesKey.InspectionFailMessage)) ;
             }
 
             if (ModelState.IsValid)
@@ -44,17 +44,17 @@ namespace Assessment_RaceTrack.Controllers
                     string fileExtension = Path.GetExtension(image.FileName);
 
                     //Add Current Date To Attached File Name  
-                    string fileName = DateTime.Now.ToString("yyyyMMdd") + fileExtension;
-                    string folderPath = Path.Combine(Server.MapPath("~/Content/images/"), fileName);
+                    string fileName = Guid.NewGuid() + fileExtension;
+                    string folderPath = Path.Combine(Server.MapPath(Utility.GetValueFromResources(ResourcesKey.ImageLocation)), fileName);
                     image.SaveAs(folderPath);
                     vehicleDto.Image = fileName;
                 }
                 //Save record in db
                 Response response = _trackService.AddVehiclesOnTrack(vehicleDto);
                 if (response == Services.Response.Inserted)
-                    ViewBag.Success = "Vehicle Added on track.";
+                    ViewBag.Success = Utility.GetValueFromResources(ResourcesKey.AddSuccessMessage);
                 else
-                    ModelState.AddModelError(nameof(vehicleDto.ResponseMessage), "Race track is already overloaded.");
+                    ModelState.AddModelError(nameof(vehicleDto.ResponseMessage), Utility.GetValueFromResources(ResourcesKey.OverloadMessage));
             }
 
             return View();

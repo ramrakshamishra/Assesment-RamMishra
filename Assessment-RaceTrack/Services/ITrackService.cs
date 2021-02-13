@@ -12,5 +12,6 @@ namespace Assessment_RaceTrack.Services
         Response AddVehiclesOnTrack(VehicleDto vehicle);
         Response RemoveVehiclesFromTrack(Guid vehicleId);
         bool VehicleInspection(VehicleDto vehicleDto);
+        int GetTotalVehicle();
     }
 }

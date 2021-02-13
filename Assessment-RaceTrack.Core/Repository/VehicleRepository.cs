@@ -1,5 +1,4 @@
 ﻿using Assessment_RaceTrack.Core.Repository.Common;
-using Assessment_RaceTrack.Data;
 using Assessment_RaceTrack.Models;
 using System;
 using System.Collections.Generic;

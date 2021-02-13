@@ -10,7 +10,7 @@ namespace Assessment_RaceTrack.Core.Repository.Common
 {
     public interface IRepository<T> where T:class
     {
-        Task Delete(T entityToDelete);
+        void Delete(T entityToDelete);
        void  Delete(object id);
        IEnumerable<T> Get(Expression<Func<T, bool>> filter = null,
              Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,

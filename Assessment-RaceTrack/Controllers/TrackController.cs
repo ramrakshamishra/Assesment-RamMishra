@@ -22,11 +22,19 @@ namespace Assessment_RaceTrack.Controllers
         {
             return PartialView("_Vehicles",_trackService.GetVehiclesOnTrack());
         }
-        [HttpPost]
-        public ActionResult RemoveVehicleFromTrack(Guid vehicleId)
+
+        [HttpGet]
+        public int GetTotalVehicleCount()
         {
-            _trackService.RemoveVehiclesFromTrack(vehicleId);
-            return RedirectToAction("Index", "Track");
+            int c= _trackService.GetTotalVehicle();
+            return c;
+        }
+
+        [HttpPost]
+        public Response RemoveVehicleFromTrack(Guid vehicleId)
+        {
+           return _trackService.RemoveVehiclesFromTrack(vehicleId);
+           
         }
     }
 }

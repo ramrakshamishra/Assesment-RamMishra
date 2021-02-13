@@ -145,8 +145,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\ResourcesKey.cs" />
+    <Compile Include="Helper\Utility.cs" />
     <Compile Include="Models\VehicleDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RaceTrack.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RaceTrack.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Services\ITrackService.cs" />
     <Compile Include="Services\TrackService.cs" />
   </ItemGroup>
@@ -173,6 +181,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\racetrack.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -217,6 +226,13 @@
       <Project>{a8599c19-b8e3-4ba2-b5f4-10969b61248b}</Project>
       <Name>Assessment-RaceTrack.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RaceTrack.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>RaceTrack.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

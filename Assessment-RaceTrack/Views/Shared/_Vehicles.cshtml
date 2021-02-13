@@ -18,8 +18,15 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>  @{rowCount++;}@rowCount </td>
+        <tr id="rowItem">
+            <td id="index">  @{rowCount++;}@rowCount 
+            @if(rowCount==5)
+            {
+                <div id="rowCount" class="hidden">
+@rowCount
+                </div>
+            }
+            </td>
             <td>@item.Name</td>
             <td>@item.Type</td>
             <td>

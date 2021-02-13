@@ -66,11 +66,11 @@ namespace  Assessment_RaceTrack.Core.Repository.Common
         public virtual void  Delete(object id)
         {
             T entityToDelete =  dbSet.Find(id);
-             Delete(entityToDelete).ConfigureAwait(false);
+             Delete(entityToDelete);
             this.context.SaveChanges();
         }
 
-        public virtual async Task Delete(T entityToDelete)
+        public virtual void  Delete(T entityToDelete)
         {
             if (context.Entry(entityToDelete).State == EntityState.Detached)
             {

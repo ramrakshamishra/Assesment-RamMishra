@@ -5,7 +5,7 @@
 - Default page will open(Track/Index) page.
 - Display S#, Name, Type, Photo in grid along with remove action.
 - "Add New Vehicle On Track" link will disable, it will enable after deleting vehicle from track.
-- Remove action will remove the vehicle from grid and after refresh page(First time) gid will reflect with updated records.
+- Remove action will remove the vehicle from grid and reflect with updated records.
 
 ------------
 

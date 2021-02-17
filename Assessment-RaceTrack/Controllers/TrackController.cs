@@ -5,7 +5,7 @@ using System.Web.Mvc;
 
 namespace Assessment_RaceTrack.Controllers
 {
-  
+
     public class TrackController : Controller
     {
         private readonly ITrackService _trackService;
@@ -22,14 +22,7 @@ namespace Assessment_RaceTrack.Controllers
         {
             return PartialView("_Vehicles",_trackService.GetVehiclesOnTrack());
         }
-
-        [HttpGet]
-        public int GetTotalVehicleCount()
-        {
-            int c= _trackService.GetTotalVehicle();
-            return c;
-        }
-
+       
         [HttpPost]
         public Response RemoveVehicleFromTrack(Guid vehicleId)
         {

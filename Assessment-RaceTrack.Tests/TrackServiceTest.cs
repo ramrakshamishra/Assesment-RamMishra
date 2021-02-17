@@ -76,10 +76,9 @@ namespace Assessment_RaceTrack.Tests
         {
             // Arrange
             Setup();
-            mockRepository.Setup(d => d.Insert(It.IsAny<Vehicle>())).Returns(() => mockdata[0]);
-          
             var mockVehicleDto = mockdata[0];
-
+            mockRepository.Setup(d => d.Insert(It.IsAny<Vehicle>())).Returns(() => mockVehicleDto);
+          
             //Act
             var actualResult = trackService.AddVehiclesOnTrack(mockVehicleDto);
 

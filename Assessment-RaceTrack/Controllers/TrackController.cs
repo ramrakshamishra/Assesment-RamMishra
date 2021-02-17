@@ -27,7 +27,6 @@ namespace Assessment_RaceTrack.Controllers
         public Response RemoveVehicleFromTrack(Guid vehicleId)
         {
            return _trackService.RemoveVehiclesFromTrack(vehicleId);
-           
         }
     }
 }
